@@ -14,5 +14,4 @@ def show_all_movie(request):
 def show_one_movie(request, id_movie: int):
     # movie = Movie.objects.get(id=id_movie) - Если не найдёт введёный пользователем индекс,то будет ошибка DoesNotExist
     movie = get_object_or_404(Movie, id=id_movie)  # Если не найдёт введёный пользователем индекс,то будет ошибка pnf404
-    return render(request, 'movie_app/one_movie.html', {
-        'movie_key': movie})
+    return render(request, 'movie_app/one_movie.html', {'movie_key': movie})
