@@ -13,4 +13,9 @@
                     бюджет - {{movie.budget}}$</li>
             {% endfor %}
         </ul>
+
+    <h3>Средний бюджет - {{ agg_key.budget__avg }}</h3>
+    <h3>Максимальный рейтинг - {{ agg_key.rating__max }}</h3>
+    <h3>Минимальный рейтинг - {{ agg_key.rating__min }}</h3>
+    <h3>Всего фильмов - {{ agg_key.id__count }}</h3>
 {% endblock %}
